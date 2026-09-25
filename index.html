@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UgyenPee ECCD — Early Childhood Care & Development | Thimphu, Bhutan</title>
+  <meta name="description" content="A safe, caring and joyful environment in Hejo, Thimphu where young children learn, play, explore and grow." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="./logo.webp" />
+
+  <!-- Google Fonts: Fraunces (Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet (Separate CSS) -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT RIBBON ================= -->
+  <div class="top-ribbon">
+    <span class="top-ribbon-pulse"></span>
+    <span>Admissions Open for 2026 Academic Session in Hejo, Thimphu</span>
+    <a href="#admissions">Learn more &rarr;</a>
+  </div>
+
+  <!-- ================= STICKY NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand">
+        <div class="brand-logo-wrap">
+          <img src="./logo.webp" alt="UgyenPee Logo" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">UgyenPee</span>
+          <span class="brand-tag">E C C D</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#learning" class="nav-link">Learning</a></li>
+        <li><a href="#programmes" class="nav-link">Programmes</a></li>
+        <li><a href="#activities" class="nav-link">Activities</a></li>
+        <li><a href="#centre" class="nav-link">Centre</a></li>
+        <li><a href="#admissions" class="nav-link">Admissions</a></li>
+        <li><a href="#news" class="nav-link">News</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Enquire Button -->
+      <div class="navbar-cta">
+        <button class="btn btn-primary btn-sm" onclick="openEnquiryModal()">Enquire</button>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+        &#9776;
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-drawer" id="mobileDrawer">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#learning">Learning &amp; Development</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#activities">Activities &amp; Gallery</a></li>
+        <li><a href="#centre">Our Centre</a></li>
+        <li><a href="#admissions">Admissions &amp; FAQs</a></li>
+        <li><a href="#news">News &amp; Updates</a></li>
+        <li><a href="#contact">Contact &amp; Location</a></li>
+      </ul>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openEnquiryModal()">Enquire About Admission</button>
+    </nav>
+  </header>
+
+  <!-- ================= 1. HERO SECTION (100% FULLPAGE VIEWPORT) ================= -->
+  <section class="hero section-fullpage" id="home">
+    <div class="container hero-grid">
+      
+      <!-- Left Content -->
+      <div class="hero-content">
+        <p class="hero-tag">EARLY CHILDHOOD CARE &amp; DEVELOPMENT · THIMPHU</p>
+        
+        <h1 class="hero-title">
+          Growing<br />
+          curious minds,<br />
+          one <span class="italic-step">little step</span><br />
+          at a time.
+        </h1>
+
+        <p class="hero-desc">
+          A safe, caring and joyful environment where children learn, play, explore and grow.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Explore UgyenPee</a>
+          <button class="btn btn-outline" onclick="openEnquiryModal('Hero Admission CTA')">Enquire About Admission</button>
+        </div>
+      </div>
+
+      <!-- Right Visual (Arch Photo, Golden Circle, Sand Backing, Dots Slider) -->
+      <div class="hero-visual">
+        
+        <!-- Sand organic backing crescent -->
+        <div class="hero-sand-shape"></div>
+
+        <!-- Overlapping Gold Circle (Top Right) -->
+        <div class="hero-gold-circle"></div>
+
+        <!-- Main Arch Card & Carousel Slider (Pure lovely young children, NO elders, NO watermarks) -->
+        <div class="hero-arch-card">
+          <div class="hero-slider">
+            
+            <!-- Slide 1: Lovely laughing toddler with pure joy -->
+            <div class="hero-slide active">
+              <img src="./images/child1_laughing.jpg" alt="Joyful laughing toddler with bright smile" />
+            </div>
+
+            <!-- Slide 2: Cute young girl smiling with colorful paints -->
+            <div class="hero-slide">
+              <img src="./images/child2_painting.jpg" alt="Cute young child smiling with creative art" />
+            </div>
+
+            <!-- Slide 3: Sweet toddler smiling outdoors in sunshine -->
+            <div class="hero-slide">
+              <img src="./images/child3_smiling.jpg" alt="Lovely preschool child smiling happily outdoors" />
+            </div>
+
+            <!-- Slide 4: Adorable baby toddler with radiant curious eyes -->
+            <div class="hero-slide">
+              <img src="./images/child4_toddler.jpg" alt="Sweet toddler with radiant curious smile" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Carousel Indicator Dots Below Hero Visual -->
+    <div class="hero-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+  </section>
+
+  <!-- ================= 2. ABOUT SECTION (100% FULLPAGE: PHILOSOPHY + 4 PILLARS) ================= -->
+  <section class="section section-white section-fullpage" id="about">
+    <div class="container">
+      
+      <!-- Philosophy Intro Grid -->
+      <div class="philosophy-grid">
+        <div>
+          <span class="eyebrow">Core Philosophy</span>
+          <h2 class="section-title">Care. Play.<br />Learning. Growth.</h2>
+        </div>
+
+        <div>
+          <p class="philosophy-lead">
+            Every child is born curious. At <strong>UgyenPee ECCD</strong>, we create the gentle rhythm, safe space, and nurturing relationships that allow young children to blossom naturally through play, discovery, and shared joy.
+          </p>
+          <p class="philosophy-body">
+            Located in peaceful Hejo near the Indian Embassy in Thimphu, our centre is designed to be a trusted second home where little learners feel secure, valued, and encouraged every day.
+          </p>
+          <a href="#learning" class="link-arrow">
+            <span>Our approach to early learning</span> &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Four Pillars Belief Grid (Fits directly on the same full page!) -->
+      <div class="pillars-grid">
+        
+        <!-- Pillar 1: Care -->
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-icon-box icon-care">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h4 class="pillar-title">Care</h4>
+            <p class="pillar-desc">Nurturing emotional safety and trusting relationships first so children feel safe and cherished.</p>
+          </div>
+          <div class="pillar-badge">Emotional Safety First</div>
+        </div>
+
+        <!-- Pillar 2: Play -->
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-icon-box icon-play">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            </div>
+            <h4 class="pillar-title">Play</h4>
+            <p class="pillar-desc">Meaningful, open-ended play as the primary foundation of all early thinking and problem-solving.</p>
+          </div>
+          <div class="pillar-badge">Child-Led Play</div>
+        </div>
+
+        <!-- Pillar 3: Grow Up -->
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-icon-box icon-grow">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </div>
+            <h4 class="pillar-title">Grow Up</h4>
+            <p class="pillar-desc">Encouraging curiosity, independence, and joy in everyday routines and self-care skills.</p>
+          </div>
+          <div class="pillar-badge">Building Confidence</div>
+        </div>
+
+        <!-- Pillar 4: Growth -->
+        <div class="pillar-card">
+          <div>
+            <div class="pillar-icon-box icon-growth">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+            </div>
+            <h4 class="pillar-title">Growth</h4>
+            <p class="pillar-desc">Supporting the holistic physical, social, emotional, and cognitive growth of every young learner.</p>
+          </div>
+          <div class="pillar-badge">Holistic Well-being</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 3. LEARNING SECTION (100% FULLPAGE: SIX AREAS) ================= -->
+  <section class="section section-dark areas-section section-fullpage" id="learning">
+    <div class="container">
+      
+      <div class="areas-header">
+        <div>
+          <span class="eyebrow eyebrow-dark">Holistic Curriculum</span>
+          <h2 class="section-title section-title-white">Six areas of a<br />growing child.</h2>
+        </div>
+        <div>
+          <p class="section-desc section-desc-white">
+            Guided by Bhutan's early childhood care standards and child-centred pedagogy, ensuring children build well-rounded confidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="areas-grid">
+        
+        <div class="area-card">
+          <div class="area-num">01</div>
+          <h3 class="area-title">Physical Development</h3>
+          <p class="area-desc">Gross and fine motor skills, body coordination, balance, and joyful outdoor physical games.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-num">02</div>
+          <h3 class="area-title">Social &amp; Emotional</h3>
+          <p class="area-desc">Empathy, sharing, emotional self-regulation, building friendships, and practicing kindness.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-num">03</div>
+          <h3 class="area-title">Language &amp; Communication</h3>
+          <p class="area-desc">Storytelling, expressive vocabulary, receptive listening, conversational ease, and rhymes.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-num">04</div>
+          <h3 class="area-title">Cognitive &amp; Problem Solving</h3>
+          <p class="area-desc">Early mathematical thinking, curiosity, classification, sorting, puzzles, and reasoning.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-num">05</div>
+          <h3 class="area-title">Creative Expression</h3>
+          <p class="area-desc">Art, finger painting, music, traditional Bhutanese rhythms, dramatic costume play, and crafts.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-num">06</div>
+          <h3 class="area-title">Exploration &amp; Discovery</h3>
+          <p class="area-desc">Nature awareness, asking questions, sensory gardening, observing plants, and science through play.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4. PROGRAMMES SECTION (100% FULLPAGE) ================= -->
+  <section class="section section-white section-fullpage" id="programmes">
+    <div class="container programme-grid">
+      
+      <div class="programme-photo-wrap">
+        <img src="./images/child5_blocks.jpg" alt="Preschool children playing with constructive building blocks" />
+      </div>
+
+      <div>
+        <span class="eyebrow">Age-Appropriate Learning</span>
+        <h2 class="section-title">Programmes shaped around each stage of early childhood.</h2>
+        <p class="section-desc">
+          Structured to meet the developmental milestones of children aged 2 to 5 years, honoring their natural curiosity with patient guidance.
+        </p>
+
+        <div class="meta-table">
+          <div>
+            <span class="meta-item-label">Age Group</span>
+            <span class="meta-item-val">2 to 5 Years</span>
+          </div>
+          <div>
+            <span class="meta-item-label">Care Options</span>
+            <span class="meta-item-val">Morning &amp; Full Day</span>
+          </div>
+          <div>
+            <span class="meta-item-label">Facilitator Ratio</span>
+            <span class="meta-item-val">1 : 6 Small Groups</span>
+          </div>
+          <div>
+            <span class="meta-item-label">Admissions</span>
+            <span class="meta-item-val" style="color: #2b7a44;">Open for 2026</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" onclick="openEnquiryModal('Programmes Overview')">View Programme Details &rarr;</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5. ACTIVITIES SECTION (100% FULLPAGE) ================= -->
+  <section class="section section-sand section-fullpage" id="activities">
+    <div class="container">
+      
+      <div class="gallery-filter-bar">
+        <div>
+          <span class="eyebrow">Life at UgyenPee</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Small discoveries.</h2>
+        </div>
+
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="play">Creative Play</button>
+          <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+          <button class="filter-btn" data-filter="culture">Culture</button>
+          <button class="filter-btn" data-filter="story">Story &amp; Arts</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        
+        <!-- Card 1 -->
+        <div class="gallery-card" data-category="play" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=700&q=80" alt="Colorful building blocks" />
+          <div class="gallery-overlay">
+            <span class="gallery-card-tag">Creative Play</span>
+            <h3 class="gallery-card-title">Building &amp; Spatial Logic</h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gallery-card" data-category="outdoor" onclick="openLightbox(this)">
+          <img src="./images/child3_smiling.jpg" alt="Child exploring outdoors" />
+          <div class="gallery-overlay">
+            <span class="gallery-card-tag">Outdoor</span>
+            <h3 class="gallery-card-title">Nature &amp; Sensory Walk</h3>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gallery-card" data-category="culture" onclick="openLightbox(this)">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80" alt="Cultural musical instrument" />
+          <div class="gallery-overlay">
+            <span class="gallery-card-tag">Culture</span>
+            <h3 class="gallery-card-title">Bhutanese Rhythm &amp; Song</h3>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="gallery-card" data-category="story" onclick="openLightbox(this)">
+          <img src="./images/child2_painting.jpg" alt="Creative colors and painting" />
+          <div class="gallery-overlay">
+            <span class="gallery-card-tag">Story &amp; Arts</span>
+            <h3 class="gallery-card-title">Creative Self-Expression</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- The Daily Rhythm Timeline -->
+      <div class="rhythm-strip">
+        <h3 class="font-serif" style="font-size: 1.25rem; color: var(--forest); font-weight: 700;">The Daily Rhythm</h3>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 2px;">A predictable, calm flow providing young children with stability and comfort.</p>
+        
+        <div class="rhythm-items">
+          <div class="rhythm-pill">🌅 8:30 AM Welcome</div>
+          <div class="rhythm-pill">☀️ 9:15 AM Circle Time</div>
+          <div class="rhythm-pill">🎨 10:00 AM Creative Play</div>
+          <div class="rhythm-pill">🌲 11:00 AM Outdoor Discovery</div>
+          <div class="rhythm-pill">🍎 12:00 PM Nutritious Lunch</div>
+          <div class="rhythm-pill">🌙 1:00 PM Quiet Rest</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. CENTRE SECTION (100% FULLPAGE: SPACES) ================= -->
+  <section class="section section-fullpage" id="centre">
+    <div class="container">
+      
+      <div class="section-header text-center" style="margin-bottom: 36px;">
+        <span class="eyebrow">Our Environment</span>
+        <h2 class="section-title">Spaces made for little hands and big curiosity.</h2>
+        <p class="section-desc">Carefully arranged to invite independent discovery, comfort, and peaceful play.</p>
+      </div>
+
+      <div class="spaces-grid">
+        
+        <div class="space-card">
+          <div class="space-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&w=700&q=80" alt="Classroom" />
+          </div>
+          <div class="space-body">
+            <h3 class="space-title">Classrooms</h3>
+            <p class="space-desc">Naturally lit rooms with child-height wooden shelves, reading corners, and non-toxic materials.</p>
+          </div>
+        </div>
+
+        <div class="space-card">
+          <div class="space-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=700&q=80" alt="Play spaces" />
+          </div>
+          <div class="space-body">
+            <h3 class="space-title">Play Spaces</h3>
+            <p class="space-desc">Padded floor mats, tactile sensory tables, building blocks, and room for joyous movement.</p>
+          </div>
+        </div>
+
+        <div class="space-card">
+          <div class="space-img-wrap">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=700&q=80" alt="Outdoor area" />
+          </div>
+          <div class="space-body">
+            <h3 class="space-title">Outdoor Areas</h3>
+            <p class="space-desc">Safe green yard surrounded by Hejo’s pine trees, sand exploration, and fresh mountain air.</p>
+          </div>
+        </div>
+
+        <div class="space-card">
+          <div class="space-img-wrap">
+            <img src="./images/child4_toddler.jpg" alt="Child safety and well-being" />
+          </div>
+          <div class="space-body">
+            <h3 class="space-title">Safety &amp; Well-being</h3>
+            <p class="space-desc">Child-safe amenities, first-aid preparedness, caring adult supervision, and secure entry.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 7. ADMISSIONS SECTION (100% FULLPAGE: FAQS) ================= -->
+  <section class="section section-white section-fullpage" id="admissions">
+    <div class="container admissions-grid">
+      
+      <div>
+        <span class="eyebrow">Admissions &amp; Parent Guide</span>
+        <h2 class="section-title">Everything you need to know before joining.</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">
+          Clear, transparent answers to questions parents ask most. We are always here to help you make the right choice for your child.
+        </p>
+
+        <div style="background-color: var(--cream); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--forest-border);">
+          <h4 class="font-serif" style="font-size: 1.2rem; font-weight: 700; color: var(--forest); margin-bottom: 6px;">Simple 3-Step Enrollment</h4>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 16px;">1. Centre Visit &bull; 2. Application Form &bull; 3. Welcome Day</p>
+          <button class="btn btn-primary" style="width: 100%;" onclick="openEnquiryModal('Admissions Form')">Contact Us About Admission</button>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What age groups are accepted at UgyenPee?</span>
+            <span class="faq-icon">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            We welcome children from 2 to 5 years old. Our activities and group sizes are tailored specifically to match each child’s developmental stage, fostering natural socialization and self-care skills.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the facilitator-to-child ratio?</span>
+            <span class="faq-icon">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            We maintain a low facilitator ratio (typically 1 facilitator to 6 children) to guarantee that every child receives attentive supervision, individualized care, and warm encouragement throughout the day.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are your daily operating hours?</span>
+            <span class="faq-icon">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            Our centre operates Monday through Friday from 8:30 AM to 4:00 PM. We offer flexible pickup arrangements for morning session learners and full-day options to assist working parents.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do you handle meals and nutrition?</span>
+            <span class="faq-icon">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            We emphasize wholesome, hygienic, child-friendly nutrition. Parents can pack familiar home meals or coordinate with our team regarding dietary requirements and allergy awareness.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can parents visit before enrolling?</span>
+            <span class="faq-icon">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            Yes, absolutely! We warmly encourage family visits. Please contact us at +975 17703534 so we can schedule your tour during an optimal time that does not interrupt children's quiet rest periods.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 8. NEWS SECTION (100% FULLPAGE: UPDATES + BANNER) ================= -->
+  <section class="section section-fullpage" id="news">
+    <div class="container">
+      
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px;">
+        <div>
+          <span class="eyebrow">Centre Updates</span>
+          <h2 class="section-title" style="margin-bottom: 0;">From the centre</h2>
+        </div>
+        <a href="#contact" class="link-arrow">View all updates &rarr;</a>
+      </div>
+
+      <div class="news-grid" style="margin-bottom: 36px;">
+        
+        <article class="news-card">
+          <div>
+            <div class="news-img">
+              <img src="./images/child2_painting.jpg" alt="Child painting" />
+            </div>
+            <div class="news-body">
+              <div class="news-meta">Admissions &bull; 2026 Session</div>
+              <h3 class="news-title">Enrolling for the new learning semester in Hejo</h3>
+              <p class="news-snippet">Registrations have commenced for toddlers and pre-primary groups with small attentive groups.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px;">
+            <a href="javascript:void(0)" onclick="openEnquiryModal('2026 Admissions')" class="link-arrow">Read announcement &rarr;</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div>
+            <div class="news-img">
+              <img src="./images/child1_laughing.jpg" alt="Children circle storytelling" />
+            </div>
+            <div class="news-body">
+              <div class="news-meta">Curriculum &bull; Story &amp; Song</div>
+              <h3 class="news-title">Celebrating folklore &amp; Bhutanese oral storytelling</h3>
+              <p class="news-snippet">How traditional folktales and puppet theater cultivate empathy, vocabulary, and moral awareness.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px;">
+            <a href="javascript:void(0)" onclick="openEnquiryModal('Storytelling')" class="link-arrow">Read article &rarr;</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div>
+            <div class="news-img">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Hejo valley mountains" />
+            </div>
+            <div class="news-body">
+              <div class="news-meta">Environment &bull; Hejo</div>
+              <h3 class="news-title">Why fresh pine air &amp; outdoor exploration matter</h3>
+              <p class="news-snippet">The cognitive and emotional benefits of natural pine needles, open spaces, and gentle mountain breezes.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px;">
+            <a href="javascript:void(0)" onclick="openEnquiryModal('Outdoor Learning')" class="link-arrow">Read article &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Golden Ochre CTA Banner Embedded in Section -->
+      <div class="cta-banner" style="padding: 36px 36px;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 10px;">Have questions about joining UgyenPee?</h2>
+        <p style="font-size: 1rem; margin-bottom: 20px;">Schedule a friendly tour to see our learning spaces, meet our educators, and experience our joyful environment firsthand.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="openEnquiryModal('Gold Banner')">Enquire Now</button>
+          <a href="tel:+97517703534" class="btn btn-white">Visit the Centre</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 9. CONTACT & LOCATION (100% FULLPAGE) ================= -->
+  <section class="section section-white section-fullpage" id="contact">
+    <div class="container contact-grid">
+      
+      <div>
+        <span class="eyebrow">Visit &amp; Contact</span>
+        <h2 class="section-title">Come and say hello.</h2>
+        <p class="section-desc">Visits are warmly welcomed by appointment to maintain peaceful daily classroom routines.</p>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble">📍</div>
+            <div>
+              <strong style="color: var(--forest); display: block;">Location</strong>
+              <p style="font-size: 0.95rem;">Hejo, Thimphu, Bhutan (Near Indian Embassy)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble">📞</div>
+            <div>
+              <strong style="color: var(--forest); display: block;">Phone &amp; WhatsApp</strong>
+              <a href="tel:+97517703534" style="color: var(--forest); font-weight: 700;">+975 17703534</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble">🕒</div>
+            <div>
+              <strong style="color: var(--forest); display: block;">Operating Hours</strong>
+              <p style="font-size: 0.95rem;">Monday – Friday: 8:30 AM – 4:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="tel:+97517703534" class="btn btn-primary btn-sm">Call +975 17703534</a>
+          <button class="btn btn-outline btn-sm" onclick="openEnquiryModal('Contact Section')">Send an Enquiry</button>
+        </div>
+      </div>
+
+      <div class="contact-photo-card">
+        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=900&q=80" alt="Hejo Thimphu surroundings" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px;">
+            <div class="brand-logo-wrap" style="width: 44px; height: 44px;">
+              <img src="./logo.webp" alt="Logo" />
+            </div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: var(--white); font-size: 1.4rem;">UgyenPee</span>
+              <span class="brand-tag" style="color: var(--gold);">E C C D</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; max-width: 320px; color: rgba(255,255,255,0.7);">
+            A safe, caring and joyful early childhood care and development centre in Hejo, Thimphu.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#learning">6 Growth Areas</a></li>
+            <li><a href="#programmes">Programmes</a></li>
+            <li><a href="#activities">Activities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admissions</h4>
+          <ul>
+            <li><a href="#admissions">Enrollment Guide</a></li>
+            <li><a href="#admissions">Age Criteria</a></li>
+            <li><a href="#admissions">FAQs</a></li>
+            <li><a href="javascript:void(0)" onclick="openEnquiryModal()">Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Hejo, Thimphu</li>
+            <li><a href="tel:+97517703534">+975 17703534</a></li>
+            <li>Mon–Fri: 8:30am–4:00pm</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 UgyenPee ECCD. All rights reserved. Thimphu, Bhutan.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#admissions">Child Protection Policy</a>
+          <a href="#contact">Privacy Notice</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= ENQUIRY MODAL ================= -->
+  <div class="modal-backdrop" id="enquiryModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">&times;</button>
+      
+      <div style="margin-bottom: 20px;">
+        <span class="eyebrow">Admissions Enquiry</span>
+        <h3 class="font-serif" style="font-size: 1.8rem; font-weight: 700; color: var(--forest);">Enquire with UgyenPee</h3>
+        <p style="font-size: 0.88rem; color: var(--muted); margin-top: 4px;">Please share your details and our team will get in touch shortly.</p>
+      </div>
+
+      <form id="admissionForm">
+        <div class="form-group">
+          <label>Parent / Guardian Name *</label>
+          <input type="text" class="form-input" required placeholder="e.g. Karma Wangchuk" />
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" class="form-input" required placeholder="+975 17XXXXXX" />
+        </div>
+
+        <div class="form-group">
+          <label>Child's Age *</label>
+          <select class="form-select" required>
+            <option value="">Select age</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Programme of Interest</label>
+          <input type="text" id="modalTopicInput" class="form-input" placeholder="Toddler Care / Pre-Primary" />
+        </div>
+
+        <div class="form-group">
+          <label>Questions or Preferred Visit Date</label>
+          <textarea class="form-textarea" rows="3" placeholder="Tell us any questions or when you would like to tour our centre..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Submit Enquiry</button>
+        <p style="text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 10px;">
+          Or call us directly at <a href="tel:+97517703534" style="color: var(--forest); font-weight: 700;">+975 17703534</a>
+        </p>
+      </form>
+
+      <div id="formSuccess" style="display: none; text-align: center; padding: 30px 10px;">
+        <div style="font-size: 3rem; margin-bottom: 12px;">🌱</div>
+        <h4 class="font-serif" style="font-size: 1.5rem; color: var(--forest); font-weight: 700;">Thank You!</h4>
+        <p style="font-size: 0.92rem; color: var(--muted); margin-top: 8px;">We have received your enquiry and will be in touch shortly to assist your family.</p>
+        <button class="btn btn-primary btn-sm" style="margin-top: 20px;" onclick="closeEnquiryModal()">Done</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= GALLERY LIGHTBOX MODAL ================= -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Gallery Full View" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- External JavaScript (Separate JS) -->
+  <script src="./script.js"></script>
+</body>
+</html>
