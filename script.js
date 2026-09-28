@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.addEventListener('click', () => {
       mobileDrawer.classList.toggle('open');
       const isOpen = mobileDrawer.classList.contains('open');
-      mobileToggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      mobileToggle.textContent = isOpen ? '✕' : '☰';
     });
 
     // Close mobile drawer when clicking a navigation link
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
-        mobileToggle.innerHTML = '&#9776;';
+        mobileToggle.textContent = '☰';
       });
     });
   }
@@ -212,6 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (admissionForm) {
     admissionForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Security Check: Verify honeypot field is empty (silent rejection for automated bots)
+      const honeypot = admissionForm.querySelector('input[name="_hp_security_check"]');
+      if (honeypot && honeypot.value.trim() !== '') {
+        console.warn('Submission rejected: automated bot detected via honeypot.');
+        return;
+      }
+
       admissionForm.style.display = 'none';
       if (formSuccess) formSuccess.style.display = 'block';
     });
@@ -227,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
       if (mobileDrawer) {
         mobileDrawer.classList.remove('open');
-        if (mobileToggle) mobileToggle.innerHTML = '&#9776;';
+        if (mobileToggle) mobileToggle.textContent = '☰';
       }
     }
   });

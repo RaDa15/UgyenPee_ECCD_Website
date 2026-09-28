@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /md/
+Disallow: /.git/
+
+# Allow all public site assets
+Allow: /
+Allow: /images/
+Allow: /style.css
+Allow: /script.js
+Allow: /logo.webp
